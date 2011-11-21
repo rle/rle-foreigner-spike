@@ -6,5 +6,10 @@ class CreateMicroposts < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    change_table :microposts do |t|
+      t.foreign_key :users, :dependent => :delete
+    end
+
   end
 end
