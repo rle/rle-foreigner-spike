@@ -27,4 +27,6 @@ ActiveRecord::Schema.define(:version => 20111121110325) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "microposts", "users", :name => "microposts_user_id_fk", :dependent => :delete
+
 end
